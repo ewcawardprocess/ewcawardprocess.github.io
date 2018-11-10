@@ -55,5 +55,5 @@ $(document).ready(function() {
     //Remove tooltip for mobile phone field
     //$(".mobileTelephone input").replaceWith('<input class="form_fields form-control " type="tel" required="required" id="contactInfo.mobileTelephone" value="" title="" name="contactInfo.mobileTelephone">');
 //change the description text
-    $("#personal-info-section .alert.alert-primary").text("Enter your name as it appears on your passport or government-issued ID. Please do not enter any special characters or diacritics, such as accent marks or symbols. Please do not use initials apart from \"NLN\" for \"No Last Name\" or \"NFN\" for \"No First Name\".\n \nFor any required fields that you cannot answer, please do not leave blank --- please type \"NA\" or \"Not Applicable\" instead.");
+    $("#personal-info-section .alert.alert-primary").html("<div class=\"alert alert-primary\" role=\"alert\">Enter your name as it appears on your passport or government-issued ID. Please do not enter any special characters or diacritics, such as accent marks or symbols. Please do not use initials apart from \"NLN\" for \"No Last Name\" or \"NFN\" for \"No First Name\".<br><br>For any required fields that you cannot answer, please do not leave blank --- please type \"NA\" or \"Not Applicable\" instead.</div>");
 });
