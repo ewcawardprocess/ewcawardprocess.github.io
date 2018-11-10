@@ -54,4 +54,6 @@ $(document).ready(function() {
         });
     //Remove tooltip for mobile phone field
     //$(".mobileTelephone input").replaceWith('<input class="form_fields form-control " type="tel" required="required" id="contactInfo.mobileTelephone" value="" title="" name="contactInfo.mobileTelephone">');
+//change the description text
+    $("#page-description").html("<p id=\"page-description\" class=\"text-left\">Enter your name as it appears on your passport or government-issued ID. Please do not enter any special characters or diacritics, such as accent marks or symbols. Please do not use initials apart from \"NLN\" for \"No Last Name\" or \"NFN\" for \"No First Name\".</p><p>For any required fields that you cannot answer, please do not leave blank --- please type \"NA\" or \"Not Applicable\" instead.</p>");
 });
