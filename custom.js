@@ -45,7 +45,7 @@ $(document).ready(function() {
             $(this).val($(this).val().replace(/[^0-9A-Za-z!;":?_@<>=#$%&'()*+,-./\[\]\ ]/g,''))
         });
     //Names fields: Remove space before and after the values
-    $("#FamilyName, #FirstName, [name='personalInfo.middleName']").change(function() {
+    $("#FamilyName").change(function() {
             alert($(this).val())
     });
     // Names fields: Limit characters to English characters, numbers, space, and special characters; otherwise, remove the restricted characters as entered.
