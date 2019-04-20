@@ -60,7 +60,6 @@ $(document).ready(function() {
     $(".mobileTelephone input").change(function() {
         if ($(this).val().length < 8) {
         $(this).val("");
-        $(.mobileTelephone).append('<p>Email address entered does not match. Check again.</p>');
         }
     });
     //Remove tooltip for mobile phone field
