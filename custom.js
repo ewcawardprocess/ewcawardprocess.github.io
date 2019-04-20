@@ -60,7 +60,7 @@ $(document).ready(function() {
     $(".mobileTelephone input").change(function() {
         if ($(this).val().length < 8) {
         $(this).val("");
-        $(.mobileTelephone).append('<small class="form-text animated shake" style="color: rgb(220, 53, 69); display: inline-block;"> Email address entered does not match. Check again.</small>');
+        $(.mobileTelephone).append('<p>Email address entered does not match. Check again.</p>');
         }
     });
     //Remove tooltip for mobile phone field
