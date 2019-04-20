@@ -59,7 +59,8 @@ $(document).ready(function() {
     //validate mobile phone number to 8 characters minimum
     $(".mobileTelephone input").change(function() {
         if ($(this).val().length < 8) {
-        $(this).val("");
+            $(this).val("");
+            $(".mobileTelephone").append("<b>Appended text</b>");
         }
     });
     //Remove tooltip for mobile phone field
