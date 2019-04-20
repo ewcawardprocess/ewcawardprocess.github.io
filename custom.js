@@ -58,7 +58,9 @@ $(document).ready(function() {
         });
     //validate mobile phone number to 8 characters minimum
     $(".mobileTelephone input").change(function() {
-        alert("Hello");
+        if ($(this).val().length < 8) {
+        $(this).val("");
+        }
     });
     //Remove tooltip for mobile phone field
     //$(".mobileTelephone input").replaceWith('<input class="form_fields form-control " type="tel" required="required" id="contactInfo.mobileTelephone" value="" title="" name="contactInfo.mobileTelephone">');
