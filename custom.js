@@ -60,7 +60,9 @@ $(document).ready(function() {
     $(".mobileTelephone input").change(function() {
         if ($(this).val().length < 8) {
             $(this).val("");
-            $(".mobileTelephone").append("<small class=\"form-text unmatch-mobile animated shake\" style=\"color: rgb(220, 53, 69); display: inline-block;\">Email address entered does not match. Check again.</small>");
+            $(".mobileTelephone").append("<small class=\"form-text unmatch-mobile animated shake\" style=\"color: rgb(220, 53, 69); display: inline-block;\">Mobile number has to be at least 8 characters long. Try again.</small>");
+        } else {
+            $(".unmatch-mobile").remove();
         }
     });
     //Remove tooltip for mobile phone field
