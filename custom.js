@@ -54,7 +54,7 @@ $(document).ready(function() {
         });
     //Prevent input characters other than numbers, plus, minus, brackets and space in the tel inputs.
     $("input[type='tel']").bind('keyup blur',function() { 
-            $(this).val($(this).val().replace(/[^0-9 +-()]/g,''))
+            $(this).val($(this).val().replace(/[^0-9 ]/g,''))
         });
     //validate mobile phone number to 8 characters minimum
     $(".mobileTelephone input").change(function() {
