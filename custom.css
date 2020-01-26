@@ -4,4 +4,12 @@
 */
 /*Add your changes here*/
 
+@media print {
+    input[type="checkbox"] {
+        display: none;
+    }
 
+    input[type="checkbox"][checked="checked"] {
+        display: inline-block;
+    }
+}
