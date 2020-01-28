@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("label[for='genderOther']").text('Please specify');
+    $("label[for='genderOther']").text('I prefer to specify.');
     //make sure secondary email type and secondary phone type are disabled when the secondary email and secondary phone are empty.
     $("#homeSecondEmailType").attr('disabled', true);
     $("#businessSecondEmailType").attr('disabled', true);
