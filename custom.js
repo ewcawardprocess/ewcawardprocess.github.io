@@ -2,9 +2,9 @@ $(document).ready(function() {
     //hide first insurance question option if EWC Foundation
     $("#ewcActivity").on("change", function() {
         if ($("#ewcActivity").val()==="Foundation Student Scholarship"){
-            $("#ins-opt-ewc").parentNode.hide();
+            $("#ins-opt-ewc").parent().hide();
         } else {
-            $("#ins-opt-ewc").parentNode.show();
+            $("#ins-opt-ewc").parent().show();
             $("#ins-opt-ewc").prop("checked",false);
         }
     });
