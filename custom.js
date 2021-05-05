@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    //hide first insurance question option if EWC Foundation
+    $("#ewcActivity").on("change", function() {
+        alert($("#ewcActivity").val());
+    });
     $("label[for='genderOther']").text('I prefer to specify.');
     //make sure secondary email type and secondary phone type are disabled when the secondary email and secondary phone are empty.
     $("#homeSecondEmailType").attr('disabled', true);
