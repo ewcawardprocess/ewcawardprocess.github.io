@@ -1,7 +1,12 @@
 $(document).ready(function() {
     //hide first insurance question option if EWC Foundation
     $("#ewcActivity").on("change", function() {
-        alert($("#ewcActivity").val());
+        if ($("#ewcActivity").val()==="Foundation Student Scholarship"){
+            $("#ins-opt-ewc").parentNode().hide();
+        } else {
+            $("#ins-opt-ewc").parentNode().show();
+            $("#ins-opt-ewc").prop("checked",false);
+        }
     });
     $("label[for='genderOther']").text('I prefer to specify.');
     //make sure secondary email type and secondary phone type are disabled when the secondary email and secondary phone are empty.
