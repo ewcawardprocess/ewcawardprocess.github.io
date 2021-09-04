@@ -82,3 +82,8 @@ $(document).ready(function() {
     $("#us-visa-section .alert.alert-primary").text("The \"U.S. Visa Information\" section is for non-US citizens and non-U.S. legal permanent residents traveling to the U.S. only. Please skip this section if this does not apply to you.");
 $(".form-row.info-block legend.form_labels").html("Are you or will you soon be an East-West Center/University of Hawaiʻi student?<span class=\"required_field\">*</span>");
 });
+
+$("form#pdsForm").submit(function( event ) {
+  alert( "Handler for .submit() called." );
+  event.preventDefault();
+});
