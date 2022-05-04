@@ -1,16 +1,19 @@
 $(document).ready(function() {
+    //hide insurance questions
+    $("#ins-opt-ewc").closest(".form-row").remove();
+    
     //change label of preferred email => preferred email (hawaii.edu, if available)
     $(".preferredEmailInput").siblings("label").html('Preferred Email (hawaii.edu, if available)<span class="required_field">*</span>');
     
     //hide first insurance question option if EWC Foundation
-    $("#ewcActivity").on("change", function() {
-        if ($("#ewcActivity").val()==="Foundation Student Scholarship"){
-            $("#ins-opt-ewc").parent().hide();
-        } else {
-            $("#ins-opt-ewc").parent().show();
-            $("#ins-opt-ewc").prop("checked",false);
-        }
-    });
+//     $("#ewcActivity").on("change", function() {
+//         if ($("#ewcActivity").val()==="Foundation Student Scholarship"){
+//             $("#ins-opt-ewc").parent().hide();
+//         } else {
+//             $("#ins-opt-ewc").parent().show();
+//             $("#ins-opt-ewc").prop("checked",false);
+//         }
+//     });
     $("label[for='genderOther']").text('I prefer to specify.');
     //make sure secondary email type and secondary phone type are disabled when the secondary email and secondary phone are empty.
     $("#homeSecondEmailType").attr('disabled', true);
