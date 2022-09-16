@@ -70,14 +70,13 @@ $(document).ready(function() {
             $(this).val($(this).val().replace(/[^0-9A-Za-z!;_@=#$%&'()+,-.\[\]\ ]/g,''))
         });
     $("#FamilyName, #FirstName").on('change',function() { 
+        $(this).removeClass("is-invalid");
+        $(this).next(".case").remove();
             if (($(this).val() == $(this).val().toUpperCase() || $(this).val() == $(this).val().toLowerCase()) && $(this).val() != "NLN" && $(this).val() != "NFN"){
                 $(this).addClass("is-invalid");
                 $(this).after(`<div class="invalid-feedback case">
                         Use title case (e.g. John Doe)
                      </div>`);
-            } else {
-                $(this).removeClass("is-invalid");
-                $(this).next(".case").remove();
             }
         });
     //Prevent input characters other than numbers, plus, minus, brackets and space in the tel inputs.
