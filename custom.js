@@ -5,7 +5,7 @@ $(document).ready(function() {
     //change label of preferred email => preferred email (hawaii.edu, if available)
     $(".preferredEmailInput").siblings("label").html('Preferred Email (hawaii.edu, if available)<span class="required_field">*</span>');
     //change label nickname
-    $("#personalInfo.preferredNameNickname").siblings("label").text("Nickname");
+    $("[id='personalInfo.preferredNameNickname']").siblings("label").text("Nickname");
     //hide first insurance question option if EWC Foundation
 //     $("#ewcActivity").on("change", function() {
 //         if ($("#ewcActivity").val()==="Foundation Student Scholarship"){
