@@ -4,7 +4,8 @@ $(document).ready(function() {
     
     //change label of preferred email => preferred email (hawaii.edu, if available)
     $(".preferredEmailInput").siblings("label").html('Preferred Email (hawaii.edu, if available)<span class="required_field">*</span>');
-    
+    //change label nickname
+    $("#personalInfo.preferredNameNickname").siblings("label").text("Nickname");
     //hide first insurance question option if EWC Foundation
 //     $("#ewcActivity").on("change", function() {
 //         if ($("#ewcActivity").val()==="Foundation Student Scholarship"){
@@ -67,6 +68,17 @@ $(document).ready(function() {
     // Names fields: Limit characters to English characters, numbers, space, and special characters; otherwise, remove the restricted characters as entered.
     $("#FamilyName, #FirstName, [name='personalInfo.middleName']").bind('keyup blur',function() { 
             $(this).val($(this).val().replace(/[^0-9A-Za-z!;_@=#$%&'()+,-.\[\]\ ]/g,''))
+        });
+    $("#FamilyName, #FirstName").on('change',function() { 
+            if ($(this).val() == $(this).val().toUpperCase() || $(this).val() == $(this).val().toLowerCase()){
+                $(this).addClass("is-invalid");
+                $(this).after(`<div class="invalid-feedback case">
+                        Use title case (e.g. John Doe)
+                     </div>`);
+            } else {
+                $(this).removeClass("is-invalid");
+                $(this).next(".case").remove();
+            }
         });
     //Prevent input characters other than numbers, plus, minus, brackets and space in the tel inputs.
     $("input[type='tel']").bind('keyup blur',function() { 
