@@ -94,7 +94,7 @@ $(document).ready(function() {
     });
     $('[id="contactInfo.businessFax"]').parent(".form-group").hide();
     //Remove tooltip for mobile phone field
-    $(".mobileTelephone input").data('original-title',"Please include country and area codes and use only numbers");
+    $(".mobileTelephone input").attr("data-original-title","Please include country and area codes and use only numbers");
 //change the description text
     $("#personal-info-section .alert.alert-primary").html("<p>Enter your name as it appears on your passport or government-issued ID. Please do not enter any special characters or diacritics, such as accent marks or symbols. Please do not use initials apart from \"NLN\" for \"No Last Name\" or \"NFN\" for \"No First Name\".</p>For any required fields that you cannot answer, please do not leave blank --- please type \"NA\" or \"Not Applicable\" instead.");
     $("#us-visa-section .alert.alert-primary").text("The \"U.S. Visa Information\" section is for non-US citizens and non-U.S. legal permanent residents traveling to the U.S. only. Please skip this section if this does not apply to you.");
