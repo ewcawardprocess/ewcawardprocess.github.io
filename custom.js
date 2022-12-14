@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    //replacing ewc logo
+    $("img.ewc-logo").replaceWith('<img class="ewc-logo" height="40" src="https://www.eastwestcenter.org/themes/custom/ewc/images/EWCLOGO-new.svg" alt="East-West center | www.eastwestcenter.org">')
     //hide insurance questions
     $("#ins-opt-ewc").closest(".form-row").remove();
     
