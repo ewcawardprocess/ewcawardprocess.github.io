@@ -96,7 +96,7 @@ $(document).ready(function() {
     });
     $('[id="contactInfo.businessFax"]').parent(".form-group").hide();
     //Remove tooltip for mobile phone field
-    $(".mobileTelephone input").attr("data-original-title","Please include country and area codes and use only numbers").tooltip('update');
+    $(".mobileTelephone input").tooltip('dispose').tooltip({title: 'Goodbye'}).tooltip('show');
     
     //change medical needs label
     $("label[for='healthDietaryInfo.medicalNeeds']").text("Please inform us of medical needs or other issues you have that could impact your participation in the program, and how we might assist you.");
