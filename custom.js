@@ -97,7 +97,7 @@ $(document).ready(function() {
     $('[id="contactInfo.businessFax"]').parent(".form-group").hide();
     //Remove tooltip for mobile phone field
     $('[id="contactInfo.mobileTelephone"]').tooltip("disable");
-    $('[id="contactInfo.mobileTelephone"]').attr("data-original-title","df dfs");
+    $('[id="contactInfo.mobileTelephone"]').attr("data-original-title","Include country and area codes.<br><b>Important:</b>Take note of this number as you will need it later.");
     $('[id="contactInfo.mobileTelephone"]').tooltip("enable");
     
     //change medical needs label
