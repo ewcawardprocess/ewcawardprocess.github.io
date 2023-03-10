@@ -98,6 +98,7 @@ $(document).ready(function() {
     //Remove tooltip for mobile phone field
     $('[id="contactInfo.mobileTelephone"]').tooltip("disable");
     $('[id="contactInfo.mobileTelephone"]').attr("data-original-title","df dfs");
+    $('[id="contactInfo.mobileTelephone"]').tooltip("enable");
     
     //change medical needs label
     $("label[for='healthDietaryInfo.medicalNeeds']").text("Please inform us of medical needs or other issues you have that could impact your participation in the program, and how we might assist you.");
