@@ -16,6 +16,9 @@ newNode.className = 'ewc-logo';
 // Replace the current node with the new node
 currentNode.parentNode.replaceChild(newNode, currentNode);
          })();
+console.log(sessionStorage.getItem(e));
+console.log(sessionStorage.getItem(h));
+console.log(sessionStorage.getItem(m));
 });
 
 $(document).ready(function() {
@@ -129,7 +132,7 @@ $(document).ready(function() {
     $(".form-row.info-block legend.form_labels").html("Are you or will you soon be an East-West Center/University of Hawaiʻi student?<span class=\"required_field\">*</span>");
     
     //form submit event
-//     $("#pds-page form").on("submit",function(e){
+    $("#pds-page form").on("submit",function(e){
 //         var required = false;
 //         $(':input[required]:visible').each(function(){
 //             $(this).val() == "" ? required = true : false;
@@ -141,7 +144,10 @@ $(document).ready(function() {
 //                 $("div-progress").remove();
 //             }
 //         }
-//     })
+      sessionStorage.setItem("e", $('.preferredEmailInput').val());
+      sessionStorage.setItem("m", $('[id="contactInfo.mobileTelephone"]').val());
+      sessionStorage.setItem("h", $('[id="contactInfo.homeCity"]').val());
+    })
 });
 
 
