@@ -1,7 +1,5 @@
 $(document).ready(function() {
     //replacing ewc logo
-    $(function(){
-    })
     $("img.ewc-logo").replaceWith('<img class="ewc-logo" height="80" src="https://www.eastwestcenter.org/themes/custom/ewc/images/EWCLOGO-new.svg" alt="East-West center | www.eastwestcenter.org">')
     //hide insurance questions
     $("#ins-opt-ewc").closest(".form-row").remove();
@@ -117,9 +115,10 @@ $(".form-row.info-block legend.form_labels").html("Are you or will you soon be a
             $(this).val() == "" ? required = true : false;
         });
         if (!required) {
-            if (confirm("Please verify and take note of this info.\nPrimary email: abc\nPhone number: abc\nHome city: abc") == false) {
+            if (confirm(`Please verify and take note of this info.\n\nPrimary email: ${$('.preferredEmailInput').val()}\nMobile number: ${$('[id="contactInfo.mobileTelephone"]').val()}\nHome city: ${$('[id="contactInfo.homeCity"]').val()}\n\nClick "Cancel" to correct the info; otherwise, click "OK" to proceed.`) == false) {
                 e.preventDefault();
                 e.stopPropagation();
+                $("div-progress").remove();
             }
         }
     })
