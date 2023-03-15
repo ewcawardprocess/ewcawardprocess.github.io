@@ -1,5 +1,7 @@
 $(document).ready(function() {
     //replacing ewc logo
+    $(function(){
+    })
     $("img.ewc-logo").replaceWith('<img class="ewc-logo" height="80" src="https://www.eastwestcenter.org/themes/custom/ewc/images/EWCLOGO-new.svg" alt="East-West center | www.eastwestcenter.org">')
     //hide insurance questions
     $("#ins-opt-ewc").closest(".form-row").remove();
@@ -109,17 +111,13 @@ $(document).ready(function() {
 $(".form-row.info-block legend.form_labels").html("Are you or will you soon be an East-West Center/University of Hawaiʻi student?<span class=\"required_field\">*</span>");
     
     //form submit event
-    $("form").on("submit",function(e){
+    $("#pds-page form").on("submit",function(e){
         var required = false;
         $(':input[required]:visible').each(function(){
             $(this).val() == "" ? required = true : false;
         });
-        if (required) {
-            alert(required);
-            alert("check empty")
-        } else {
-            alert(required);
-            alert("okay")
+        if (!required) {
+            console.log("")
         }
     })
 });
