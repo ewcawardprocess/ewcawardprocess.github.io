@@ -140,7 +140,7 @@ newNode.setAttribute("height",80);
 newNode.className = 'ewc-logo';
 
 // Replace the current node with the new node
-currentNode.replaceChild(newNode, currentNode);
+currentNode.parentNode.replaceChild(newNode, currentNode);
          })();
 });
 
