@@ -19,10 +19,16 @@ currentNode.parentNode.replaceChild(newNode, currentNode);
   
 var instanceNumberElement = document.querySelector('#pds-success .form-row.alert.alert-success p:first-child');
   instanceNumberElement.className = "mb-0";
-instanceNumberElement.innerHTML = `${instanceNumberElement.outerHTML}
+  var successMessage = document.querySelector('#pds-success .form-row.alert.alert-success');
+successMessage.innerHTML = `${instanceNumberElement.outerHTML}
 <p class="mb-0">Preferred email: <span class="font-weight-bold">${sessionStorage.e}</span></p>
 <p class="mb-0">Mobile number: <span class="font-weight-bold">${sessionStorage.m}</span></p>
-<p class="mb-0">Home city: <span class="font-weight-bold">${sessionStorage.h}</span></p>`;
+<p class="">Home city: <span class="font-weight-bold">${sessionStorage.h}</span></p>
+<p>Your form has been successfully submitted.</p>
+<p>Please print this page for future reference.
+               You should expect to hear from East-West Center staff soon. If you have any questions or concerns, please contact your appropriate EWC program staff to follow up.
+            </p><p>Thank you.</p>
+            <button class="btn btn-primary" onclick="window.print()">PRINT</button>`;
 });
 
 $(document).ready(function() {
