@@ -117,7 +117,7 @@ $(".form-row.info-block legend.form_labels").html("Are you or will you soon be a
             $(this).val() == "" ? required = true : false;
         });
         if (!required) {
-            if (confirm() == false) {
+            if (confirm("Please verify and take note of this info.\nPrimary email: abc\nPhone number: abc\nHome city: abc") == false) {
                 e.preventDefault();
                 e.stopPropagation();
             }
