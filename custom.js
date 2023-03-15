@@ -16,9 +16,9 @@ newNode.className = 'ewc-logo';
 // Replace the current node with the new node
 currentNode.parentNode.replaceChild(newNode, currentNode);
          })();
-console.log(sessionStorage.getItem(e));
-console.log(sessionStorage.getItem(h));
-console.log(sessionStorage.getItem(m));
+console.log(sessionStorage.e);
+console.log(sessionStorage.h);
+console.log(sessionStorage.m);
 });
 
 $(document).ready(function() {
