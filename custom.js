@@ -18,10 +18,11 @@ currentNode.parentNode.replaceChild(newNode, currentNode);
          })();
   
 var instanceNumberElement = document.querySelector('#pds-success .form-row.alert.alert-success p:first-child');
+  instanceNumberElement.className = "mb-0";
 instanceNumberElement.innerHTML = `${instanceNumberElement.outerHTML}
-<p>Preferred email: <span class="font-weight-bold">${sessionStorage.e}</span></p>
-<p>Mobile number: <span class="font-weight-bold">${sessionStorage.m}</span></p>
-<p>Home city: <span class="font-weight-bold">${sessionStorage.h}</span></p>`;
+<p class="mb-0">Preferred email: <span class="font-weight-bold">${sessionStorage.e}</span></p>
+<p class="mb-0">Mobile number: <span class="font-weight-bold">${sessionStorage.m}</span></p>
+<p class="mb-0">Home city: <span class="font-weight-bold">${sessionStorage.h}</span></p>`;
 });
 
 $(document).ready(function() {
