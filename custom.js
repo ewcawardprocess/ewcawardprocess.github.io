@@ -117,7 +117,10 @@ $(".form-row.info-block legend.form_labels").html("Are you or will you soon be a
             $(this).val() == "" ? required = true : false;
         });
         if (!required) {
-            console.log("")
+            if (confirm() == false) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
         }
     })
 });
