@@ -123,3 +123,17 @@ $(".form-row.info-block legend.form_labels").html("Are you or will you soon be a
         }
     })
 });
+
+// Get the current element
+var currentNode = document.querySelector('.ewc-logo');
+
+// Create a new element
+var newNode = document.createElement('img');
+newNode.src = 'https://www.eastwestcenter.org/themes/custom/ewc/images/EWCLOGO-new.svg';
+newNode.setAttribute("height",80);
+
+// Add ID and content
+newNode.className = 'ewc-logo';
+
+// Replace the current node with the new node
+currentNode.parentNode.replaceChild(newNode, currentNode);
