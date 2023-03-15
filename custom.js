@@ -110,6 +110,16 @@ $(".form-row.info-block legend.form_labels").html("Are you or will you soon be a
     
     //form submit event
     $("form").on("submit",function(e){
-        alert("submit");
+        var required = false;
+        $(':input[required]:visible').each(function(){
+            $(this).val() == "" ? required = true : false;
+        });
+        if (required) {
+            alert(required);
+            alert("check empty")
+        } else {
+            alert(required);
+            alert("okay")
+        }
     })
 });
