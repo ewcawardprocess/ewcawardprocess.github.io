@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Hello World!");
+    (function() {
+           'use strict';
+// Get the current element
+var currentNode = document.querySelector('.ewc-logo');
+
+// Create a new element
+var newNode = document.createElement('img');
+newNode.src = 'https://www.eastwestcenter.org/themes/custom/ewc/images/EWCLOGO-new.svg';
+newNode.setAttribute("height",80);
+
+// Add ID and content
+newNode.className = 'ewc-logo';
+
+// Replace the current node with the new node
+currentNode.parentNode.replaceChild(newNode, currentNode);
+         })();
+});
+
 $(document).ready(function() {
     //replacing ewc logo
 //     $("img.ewc-logo").replaceWith('<img class="ewc-logo" height="80" src="https://www.eastwestcenter.org/themes/custom/ewc/images/EWCLOGO-new.svg" alt="East-West center | www.eastwestcenter.org">')
@@ -124,24 +144,6 @@ $(".form-row.info-block legend.form_labels").html("Are you or will you soon be a
     })
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Hello World!");
-    (function() {
-           'use strict';
-// Get the current element
-var currentNode = document.querySelector('.ewc-logo');
 
-// Create a new element
-var newNode = document.createElement('img');
-newNode.src = 'https://www.eastwestcenter.org/themes/custom/ewc/images/EWCLOGO-new.svg';
-newNode.setAttribute("height",80);
-
-// Add ID and content
-newNode.className = 'ewc-logo';
-
-// Replace the current node with the new node
-currentNode.parentNode.replaceChild(newNode, currentNode);
-         })();
-});
 
 
