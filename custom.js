@@ -16,9 +16,12 @@ newNode.className = 'ewc-logo';
 // Replace the current node with the new node
 currentNode.parentNode.replaceChild(newNode, currentNode);
          })();
-console.log(sessionStorage.e);
-console.log(sessionStorage.h);
-console.log(sessionStorage.m);
+  
+var instanceNumberElement = document.querySelector('#pds-success .form-row.alert.alert-success p:first-child');
+instanceNumberElement.innerHTML = `${instanceNumberElement.outerHTML}
+<p>Preferred email: <span class="font-weight-bold">${sessionStorage.e}</span></p>
+<p>Mobile number: <span class="font-weight-bold">${sessionStorage.m}</span></p>
+<p>Home city: <span class="font-weight-bold">${sessionStorage.h}</span></p>`;
 });
 
 $(document).ready(function() {
