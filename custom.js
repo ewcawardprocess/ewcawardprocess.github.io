@@ -107,4 +107,9 @@ $(document).ready(function() {
     $("#personal-info-section .alert.alert-primary").html("<p>Enter your name as it appears on your passport or government-issued ID. Please do not enter any special characters or diacritics, such as accent marks or symbols. Please do not use initials apart from \"NLN\" for \"No Last Name\" or \"NFN\" for \"No First Name\".</p>For any required fields that you cannot answer, please do not leave blank --- please type \"NA\" or \"Not Applicable\" instead.");
     $("#us-visa-section .alert.alert-primary").text("The \"U.S. Visa Information\" section is for non-US citizens and non-U.S. legal permanent residents traveling to the U.S. only. Please skip this section if this does not apply to you.");
 $(".form-row.info-block legend.form_labels").html("Are you or will you soon be an East-West Center/University of Hawaiʻi student?<span class=\"required_field\">*</span>");
+    
+    //form submit event
+    $("form").on("submit",function(e){
+        alert("submit");
+    })
 });
