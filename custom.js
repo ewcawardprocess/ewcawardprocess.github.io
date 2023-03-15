@@ -124,7 +124,9 @@ $(".form-row.info-block legend.form_labels").html("Are you or will you soon be a
     })
 });
 
-(function() {
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Hello World!");
+    (function() {
            'use strict';
 // Get the current element
 var currentNode = document.querySelector('.ewc-logo');
@@ -140,3 +142,6 @@ newNode.className = 'ewc-logo';
 // Replace the current node with the new node
 currentNode.replaceChild(newNode, currentNode);
          })();
+});
+
+
