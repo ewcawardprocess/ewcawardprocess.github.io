@@ -216,12 +216,12 @@ $(document).ready(function () {
         }
         $('[name="healthDietaryInfo.dietaryRestrictions"]').val(dietaryRestrictions.join("; "));
     });
-
+    $('#homePreferredPhoneType').removeClass("form-check-inline").addClass("d-none");
     $('[name="contactInfo.homeTelephone"]').on("keyup", function () {
         if ($(this).val() != "") {
-            $('#homePreferredPhoneType').parent().show();
+            $('#homePreferredPhoneType').parent().removeClass("d-none").addClass("form-check-inline");
         } else {
-            $('#homePreferredPhoneType').parent().hide();
+            $('#homePreferredPhoneType').parent().removeClass("form-check-inline").addClass("d-none");
         }
     });
 });
