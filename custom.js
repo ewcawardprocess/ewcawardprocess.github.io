@@ -162,7 +162,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#health-section").append(`<div class="form-row">
+    $(`[name="healthDietaryInfo.medicalNeeds"]`).after(`<div class="form-row">
     <div class="form-group col-md-4">
         <fieldset>
                         <legend class="form_labels">Do you have dietary restrictions?</legend>
