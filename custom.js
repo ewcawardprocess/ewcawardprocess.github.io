@@ -163,31 +163,31 @@ $(document).ready(function () {
     });
 
     $(`[name="healthDietaryInfo.medicalNeeds"]`).parents(".form-row").after(`<div class="form-row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-12">
         <fieldset>
                         <legend class="form_labels">Do you have dietary restrictions?</legend>
                         <div class="form-control dietary-restriction">
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox form-check-inline">
                             <input type="checkbox" class="custom-control-input" id="restrict2" name="Vegetarian">
                             <label class="custom-control-label" for="restrict2">Vegetarian</label>
                             </div>
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox form-check-inline">
                             <input type="checkbox" class="custom-control-input" id="restrict3" name="Gluten allergy">
                             <label class="custom-control-label" for="restrict3">Gluten allergy</label>
                             </div>
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox form-check-inline">
                             <input type="checkbox" class="custom-control-input" id="restrict4" name="Lactose allergy">
                             <label class="custom-control-label" for="restrict4">Lactose allergy</label>
                             </div>
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox form-check-inline">
                             <input type="checkbox" class="custom-control-input" id="restrict5" name="Nut allergy">
                             <label class="custom-control-label" for="restrict5">Nut allergy</label>
                             </div>
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox form-check-inline">
                             <input type="checkbox" class="custom-control-input" id="restrict6" name="Shellfish allergy">
                             <label class="custom-control-label" for="restrict6">Shellfish allergy</label>
                             </div>
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox form-check-inline">
                             <input type="checkbox" class="custom-control-input" id="restrict7" name="Other">
                             <label class="custom-control-label" for="restrict7">Other</label>
                             </div>
