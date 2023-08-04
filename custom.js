@@ -151,15 +151,14 @@ $(document).ready(function () {
     $("select#ewcProgram").on("change", function () {
         if ($(this).val() == "AE") {
             $(".info-block#health-section h4").text("Dietary Restrictions");
-            $(`[id="healthDietaryInfo.medicalNeeds"]`).parent(".form-row").hide();
-            $(`[id="healthDietaryInfo.religiousConcerns"]`).parent(".form-row").hide();
-            $(`[id="healthDietaryInfo.healthDietaryComments"]`).parent(".form-row").hide();
-
+            $(`[name="healthDietaryInfo.medicalNeeds"]`).parent(".form-row").hide();
+            $(`[name="healthDietaryInfo.religiousConcerns"]`).parent(".form-row").hide();
+            $(`[name="healthDietaryInfo.healthDietaryComments"]`).parent(".form-row").hide();
         } else {
             $(".info-block#health-section h4").text("Health/Dietary and Other Concerns");
-            $(`[id="healthDietaryInfo.medicalNeeds"]`).parent(".form-row").show();
-            $(`[id="healthDietaryInfo.religiousConcerns"]`).parent(".form-row").show();
-            $(`[id="healthDietaryInfo.healthDietaryComments"]`).parent(".form-row").show();
+            $(`[name="healthDietaryInfo.medicalNeeds"]`).parent(".form-row").show();
+            $(`[name="healthDietaryInfo.religiousConcerns"]`).parent(".form-row").show();
+            $(`[name="healthDietaryInfo.healthDietaryComments"]`).parent(".form-row").show();
         }
     });
 
