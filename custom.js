@@ -222,6 +222,7 @@ $(document).ready(function () {
             $('#homePreferredPhoneType').parent().removeClass("d-none").addClass("form-check-inline");
         } else {
             $('#homePreferredPhoneType').parent().removeClass("form-check-inline").addClass("d-none");
+            $('#homePreferredPhoneType').prop("checked", false);
         }
     });
 });
