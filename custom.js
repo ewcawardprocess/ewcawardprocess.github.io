@@ -205,7 +205,7 @@ $(document).ready(function () {
     </div>`);
 
     $('.form-control.dietary-restriction input[type="checkbox"]').on("change", function () {
-        if ($(this).attr("for") == "restrict7") {
+        if ($(this).attr("name") == "Other") {
             $("#otherDietaryRestrictions").removeClass("d-none");
         } else {
             $("#otherDietaryRestrictions").addClass("d-none");
@@ -214,7 +214,7 @@ $(document).ready(function () {
     $('.form-control.dietary-restriction input[type="checkbox"], [name="healthDietaryInfo.otherDietaryRestrictions"]').on("change", function () {
         var dietaryRestrictions = [];
         $('.form-control.dietary-restriction input[type="checkbox"]:checked').each(function () {
-            dietaryRestrictions.push($(this).attr("name"));
+            $(this).attr("name") != "Other" ? dietaryRestrictions.push($(this).attr("name")) : false;
         });
         if ($('[name="healthDietaryInfo.otherDietaryRestrictions"]').val() != "") {
             dietaryRestrictions.push('Other: ' + $('[name="healthDietaryInfo.otherDietaryRestrictions"]').val());
