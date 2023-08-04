@@ -168,10 +168,6 @@ $(document).ready(function () {
                         <legend class="form_labels">Do you have dietary restrictions?</legend>
                         <div class="form-control dietary-restriction">
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="restrict1" name="None">
-                            <label class="custom-control-label" for="restrict1">None</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="restrict2" name="Vegetarian">
                             <label class="custom-control-label" for="restrict2">Vegetarian</label>
                             </div>
