@@ -216,4 +216,12 @@ $(document).ready(function () {
         }
         $('[name="healthDietaryInfo.dietaryRestrictions"]').val(dietaryRestrictions.join("; "));
     });
+
+    $('[name="contactInfo.homeTelephone"]').on("keyup", function () {
+        if ($(this).val() != "") {
+            $('#homePreferredPhoneType').parent().show();
+        } else {
+            $('#homePreferredPhoneType').parent().hide();
+        }
+    });
 });
