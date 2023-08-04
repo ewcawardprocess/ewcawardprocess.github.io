@@ -166,7 +166,7 @@ $(document).ready(function () {
     <div class="form-group col-md-4">
         <fieldset>
                         <legend class="form_labels">Do you have dietary restrictions?</legend>
-                        <div class="form-control">
+                        <div class="form-control dietary-restriction">
                             <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" for="restrict1" name="None">
                             <label class="custom-control-label" for="restrict1">None</label>
@@ -198,9 +198,27 @@ $(document).ready(function () {
                         </div>
         </fieldset>
     </div>
-    <div class="form-group col-md-4" id="otherDietaryRestrictions">
+    <div class="form-group col-md-4 d-none" id="otherDietaryRestrictions">
         <label>Other dietary restrictions</label>
         <input type="text" class="form-control" name="healthDietaryInfo.otherDietaryRestrictions">
     </div>
     </div>`);
+
+    $('.form-control.dietary-restriction input[type="checkbox"]').on("change", function () {
+        if ($(this).attr("for") == "restrict7") {
+            $("#otherDietaryRestrictions").removeClass("d-none");
+        } else {
+            $("#otherDietaryRestrictions").addClass("d-none");
+        }
+    });
+    $('.form-control.dietary-restriction input[type="checkbox"], [name="healthDietaryInfo.otherDietaryRestrictions"]').on("change", function () {
+        var dietaryRestrictions = [];
+        $('.form-control.dietary-restriction input[type="checkbox"]:checked').each(function () {
+            dietaryRestrictions.push($(this).attr("name"));
+        });
+        if ($('[name="healthDietaryInfo.otherDietaryRestrictions"]').val() != "") {
+            dietaryRestrictions.push('Other: ' + $('[name="healthDietaryInfo.otherDietaryRestrictions"]').val());
+        }
+        $('[name="healthDietaryInfo.dietaryRestrictions"]').val(dietaryRestrictions.join("; "));
+    });
 });
