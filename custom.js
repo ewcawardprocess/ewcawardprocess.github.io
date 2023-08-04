@@ -207,6 +207,7 @@ $(document).ready(function () {
             $("#otherDietaryRestrictions").addClass("d-none");
         }
     });
+    $('[name="healthDietaryInfo.dietaryRestrictions"]').parents(".form-row").hide();
     $('.form-control.dietary-restriction input[type="checkbox"], [name="healthDietaryInfo.otherDietaryRestrictions"]').on("change", function () {
         var dietaryRestrictions = [];
         $('.form-control.dietary-restriction input[type="checkbox"]:checked').each(function () {
