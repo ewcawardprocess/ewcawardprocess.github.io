@@ -168,32 +168,32 @@ $(document).ready(function () {
                         <legend class="form_labels">Do you have dietary restrictions?</legend>
                         <div class="form-control">
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input"  for="restrict1" name="None">
+                            <input type="checkbox" class="custom-control-input" for="restrict1" name="None">
                             <label class="custom-control-label" for="restrict1">None</label>
                             </div>
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input"  for="restrict1" name="Vegetarian">
-                            <label class="custom-control-label" for="restrict1">Vegetarian</label>
+                            <input type="checkbox" class="custom-control-input" for="restrict2" name="Vegetarian">
+                            <label class="custom-control-label" for="restrict2">Vegetarian</label>
                             </div>
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" name="Gluten allergy">
-                            <label class="custom-control-label" for="restrict1">Gluten allergy</label>
+                            <input type="checkbox" class="custom-control-input" for="restrict3" name="Gluten allergy">
+                            <label class="custom-control-label" for="restrict3">Gluten allergy</label>
                             </div>
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" name="Lactose allergy">
-                            <label class="custom-control-label" for="restrict1">Lactose allergy</label>
+                            <input type="checkbox" class="custom-control-input" for="restrict4" name="Lactose allergy">
+                            <label class="custom-control-label" for="restrict4">Lactose allergy</label>
                             </div>
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" name="Nut allergy">
-                            <label class="custom-control-label" for="restrict1">Nut allergy</label>
+                            <input type="checkbox" class="custom-control-input" for="restrict5" name="Nut allergy">
+                            <label class="custom-control-label" for="restrict5">Nut allergy</label>
                             </div>
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" name="Shellfish allergy">
-                            <label class="custom-control-label" for="restrict1">Shellfish allergy</label>
+                            <input type="checkbox" class="custom-control-input" for="restrict6" name="Shellfish allergy">
+                            <label class="custom-control-label" for="restrict6">Shellfish allergy</label>
                             </div>
                             <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" name="Other">
-                            <label class="custom-control-label" for="restrict1">Other</label>
+                            <input type="checkbox" class="custom-control-input" for="restrict7" name="Other">
+                            <label class="custom-control-label" for="restrict7">Other</label>
                             </div>
                         </div>
         </fieldset>
