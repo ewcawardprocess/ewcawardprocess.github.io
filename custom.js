@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(document).ready(function () {
     // Add css stylesheet url to head
-    $("head").append('<link rel="stylesheet" href="https://ewcawardprocess.github.io/build/css/intlTelInput.css">');
-    // Add js script url to head
-    $("body").append('<script src="https://ewcawardprocess.github.io/build/js/intlTelInput-jquery.min.js"></script>');
+    // $("head").append('<link rel="stylesheet" href="https://ewcawardprocess.github.io/build/css/intlTelInput.css">');
+    // // Add js script url to head
+    // $("body").append('<script src="https://ewcawardprocess.github.io/build/js/intlTelInput-jquery.min.js"></script>');
 
     $("#FamilyName").on("change", function () {
         $("[type=tel]").intlTelInput({
