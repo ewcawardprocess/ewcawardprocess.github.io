@@ -46,11 +46,8 @@ $(document).ready(function () {
     // Add js script url to head
     $("body").append('<script src="https://ewcawardprocess.github.io/build/js/intlTelInput-jquery.min.js"></script>');
 
-
-
     $("#FamilyName").on("change", function () {
         $("[type=tel]").intlTelInput({
-            initialCountry: "auto",
             preferredCountries: ["us"],
             separateDialCode: true,
         });
