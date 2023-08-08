@@ -44,7 +44,7 @@ $(document).ready(function () {
     // Add css stylesheet url to head
     $("head").append('<link rel="stylesheet" href="https://ewcawardprocess.github.io/build/css/intlTelInput.css">');
     // Add js script url to head
-    $("head").append('<script src="https://ewcawardprocess.github.io/build/js/intlTelInput-jquery.min.js"></script>');
+    $("body").append('<script src="https://ewcawardprocess.github.io/build/js/intlTelInput-jquery.min.js"></script>');
 
     $("[type=tel]").intlTelInput({
 
