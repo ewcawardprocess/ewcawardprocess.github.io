@@ -13,3 +13,8 @@
         display: inline-block;
     }
 }
+
+.iti {
+  display: block!important;
+  width: 100%;
+}
