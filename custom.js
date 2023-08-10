@@ -260,7 +260,7 @@ $(document).ready(function () {
         $('[name="healthDietaryInfo.dietaryRestrictions"]').val(dietaryRestrictions.join("; "));
     });
     $('#homePreferredPhoneType').parent().removeClass("form-check-inline").addClass("d-none");
-    $('[name="contactInfo.homeTelephone"]').on("keyup", function () {
+    $('[name="contactInfo.homeTelephone-assist"]').on("keyup", function () {
         if ($(this).val() != "") {
             $('#homePreferredPhoneType').parent().removeClass("d-none").addClass("form-check-inline");
         } else {
