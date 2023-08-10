@@ -44,7 +44,7 @@ $(document).ready(function () {
     // Add css stylesheet url to head
     $("head").append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">');
     // // Add js script url to head
-    $("body").append('<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>');
+    // $("body").append('<script src=""></script>');
 
     const intlOption = {
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
@@ -66,15 +66,15 @@ $(document).ready(function () {
 
     var inputs = document.querySelectorAll('.phoneinput');
     var itis = [];
-    $("#FamilyName").on("change", function () {
-    for (var i = 0; i < inputs.length; i++) {
-        try {
-            var iti = window.intlTelInput(inputs[i], intlOption);
-            itis.push(iti);
-        } catch (error) {
-            console.log(error);
+    $.getScript("https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js", function () {
+        for (var i = 0; i < inputs.length; i++) {
+            try {
+                var iti = window.intlTelInput(inputs[i], intlOption);
+                itis.push(iti);
+            } catch (error) {
+                console.log(error);
+            }
         }
-    }
     });
 
     // Hide insurance questions
@@ -113,7 +113,7 @@ $(document).ready(function () {
             $("#homeSecondEmailType").closest('div.form-control').css("background-color", "#fafafa");
         }
     });
-    $("[name='emergencyContactInfo.secondaryTelephone']").change(function () {
+    $("[name='emergencyContactInfo.secondaryTelephone-assist']").change(function () {
         if ($(this).val() != "") {
             $("#personal2").attr('disabled', false).prop('required', true);
             $("#business2").attr('disabled', false);
