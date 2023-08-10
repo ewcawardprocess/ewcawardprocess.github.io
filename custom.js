@@ -187,7 +187,7 @@ $(document).ready(function () {
     //form submit event
     $("#pds-page form").on("submit", function (e) {
         sessionStorage.setItem("e", $('.preferredEmailInput').val());
-        sessionStorage.setItem("m", $('[id="contactInfo.mobileTelephone"]').val());
+        sessionStorage.setItem("m", $('[id="contactInfo.mobileTelephone"]').val().replace(/[^0-9]/g, ''));
         sessionStorage.setItem("h", $('[id="contactInfo.homeCity"]').val());
     });
 
