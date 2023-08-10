@@ -61,7 +61,6 @@ $(document).ready(function () {
 
     $("[type=tel]").each(function () {
         $(this).after('<input class="phoneinput" type="text" name="' + $(this).attr("name") + '-assist" id="' + $(this).attr("id") + '-full" value="">');
-        $(`#${$(this).attr("id")}-full`).intlTelInput(intlOption);
         $(this).addClass("d-none");
     });
 
