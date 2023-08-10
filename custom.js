@@ -42,16 +42,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(document).ready(function () {
     // Add css stylesheet url to head
-    // $("head").append('<link rel="stylesheet" href="https://ewcawardprocess.github.io/build/css/intlTelInput.css">');
+    // $("head").append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">');
     // // Add js script url to head
-    // $("body").append('<script src="https://ewcawardprocess.github.io/build/js/intlTelInput-jquery.min.js"></script>');
+    // $("body").append('<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>');
 
-    $("#FamilyName").on("change", function () {
-        $("[type=tel]").intlTelInput({
-            preferredCountries: ["us"],
-            separateDialCode: true,
-        });
+    const intlOption = {
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+        separateDialCode: true,
+        initialCountry: "auto",
+        hiddenInput: "phone-full",
+        geoIpLookup: callback => {
+            fetch("https://ipapi.co/json")
+                .then(res => res.json())
+                .then(data => callback(data.country_code))
+                .catch(() => callback("us"));
+        },
+    }
+
+    $("[type=tel]").each(function () {
+        $(this).after('<input class="phoneinput" type="text" name="' + $(this).attr("name") + '-assist" id="' + $(this).attr("id") + '-full" value="">');
+        $(`#${$(this).attr("id")}-full`).intlTelInput(intlOption);
+        $(this).addClass("d-none");
     });
+
+    // $("#FamilyName").on("change", function () {
+    //     $("[type=tel]").intlTelInput({
+    //         preferredCountries: ["us"],
+    //         separateDialCode: true,
+    //     });
+    // });
 
     // Hide insurance questions
     $("#ins-opt-ewc").closest(".form-row").remove();
