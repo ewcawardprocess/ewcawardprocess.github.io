@@ -64,12 +64,12 @@ $(document).ready(function () {
         $(this).addClass("d-none");
     });
 
-    // $("#FamilyName").on("change", function () {
-    //     $("[type=tel]").intlTelInput({
-    //         preferredCountries: ["us"],
-    //         separateDialCode: true,
-    //     });
-    // });
+    var inputs = document.querySelectorAll('.phoneinput');
+    var itis = [];
+    for (var i = 0; i < inputs.length; i++) {
+        var iti = window.intlTelInput(inputs[i], intlOption);
+        itis.push(iti);
+    }
 
     // Hide insurance questions
     $("#ins-opt-ewc").closest(".form-row").remove();
@@ -145,9 +145,14 @@ $(document).ready(function () {
         }
     });
     //Prevent input characters other than numbers, plus, minus, brackets and space in the tel inputs.
-    $("input[type='tel']").bind('keyup blur', function () {
-        $(this).val($(this).val().replace(/[^0-9 ]/g, ''))
+    $("input.phoneinput").bind('keyup blur', function () {
+        $(this).val($(this).val().replace(/[^0-9 +]/g, ''));
+        var input = document.querySelector(`#${$(this).attr("id")}`);
+        var iti = window.intlTelInputGlobals.getInstance(input);
+        var dialCode = iti.getSelectedCountryData().dialCode;
+        $(`#${$(this).attr("id").replaceAll("-full","")}`).val("+" + dialCode + " " + $(this).val().replace(/[^0-9]/g, ''));            
     });
+
     //validate mobile phone number to 8 characters minimum
     $(".mobileTelephone input").change(function () {
         if ($(this).val().length < 8) {
