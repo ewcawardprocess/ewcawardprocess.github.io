@@ -66,6 +66,7 @@ $(document).ready(function () {
 
     var inputs = document.querySelectorAll('.phoneinput');
     var itis = [];
+    $("#FamilyName").on("change", function () {
     for (var i = 0; i < inputs.length; i++) {
         try {
             var iti = window.intlTelInput(inputs[i], intlOption);
@@ -74,6 +75,7 @@ $(document).ready(function () {
             console.log(error);
         }
     }
+    });
 
     // Hide insurance questions
     $("#ins-opt-ewc").closest(".form-row").remove();
