@@ -153,7 +153,7 @@ $(document).ready(function () {
     //Prevent input characters other than numbers, plus, minus and space in the tel inputs.
     $("input.phoneinput").bind('keyup blur', function () {
         $(this).val($(this).val().replace(/[^0-9\-\+\ ]/g, ''));
-        var input = document.querySelector(`#${$(this).attr("id")}`);
+        var input = document.querySelector(`[id="${$(this).attr("id")}"]`);
         var iti = window.intlTelInputGlobals.getInstance(input);
         var dialCode = iti.getSelectedCountryData().dialCode;
         var value = "+" + dialCode + " " + $(this).val().replace(/[^0-9]/g, '');
