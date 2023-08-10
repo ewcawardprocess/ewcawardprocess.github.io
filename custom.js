@@ -67,8 +67,12 @@ $(document).ready(function () {
     var inputs = document.querySelectorAll('.phoneinput');
     var itis = [];
     for (var i = 0; i < inputs.length; i++) {
-        var iti = window.intlTelInput(inputs[i], intlOption);
-        itis.push(iti);
+        try {
+            var iti = window.intlTelInput(inputs[i], intlOption);
+            itis.push(iti);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     // Hide insurance questions
