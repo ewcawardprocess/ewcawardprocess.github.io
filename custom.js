@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(document).ready(function () {
     // Add css stylesheet url to head
-    $("head").append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">');
+    // $("head").append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">');
     // // Add js script url to head
-    $("body").append('<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>');
+    // $("body").append('<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>');
 
     const intlOption = {
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
@@ -144,13 +144,15 @@ $(document).ready(function () {
                      </div>`);
         }
     });
-    //Prevent input characters other than numbers, plus, minus, brackets and space in the tel inputs.
+    //Prevent input characters other than numbers, plus, minus and space in the tel inputs.
     $("input.phoneinput").bind('keyup blur', function () {
-        $(this).val($(this).val().replace(/[^0-9 +]/g, ''));
+        $(this).val($(this).val().replace(/[^0-9\-\+\ ]/g, ''));
         var input = document.querySelector(`#${$(this).attr("id")}`);
         var iti = window.intlTelInputGlobals.getInstance(input);
         var dialCode = iti.getSelectedCountryData().dialCode;
-        $(`#${$(this).attr("id").replaceAll("-full","")}`).val("+" + dialCode + " " + $(this).val().replace(/[^0-9]/g, ''));            
+        var value = "+" + dialCode + " " + $(this).val().replace(/[^0-9]/g, '');
+        $(`[id="${$(this).attr("id").replaceAll("-full","")}"]`).val(value);            
+        console.log(value);
     });
 
     //validate mobile phone number to 8 characters minimum
