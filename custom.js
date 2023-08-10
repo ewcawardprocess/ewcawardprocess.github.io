@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(document).ready(function () {
     // Add css stylesheet url to head
-    // $("head").append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">');
+    $("head").append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">');
     // // Add js script url to head
-    // $("body").append('<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>');
+    $("body").append('<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>');
 
     const intlOption = {
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
