@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <p class="mb-0">Your preferred email: <span class="font-weight-bold">${sessionStorage.e}</span></p>
                                     <p class="mb-0">Your mobile number: <span class="font-weight-bold">${sessionStorage.m}</span></p>
                                     <p class="mb-0">Your home city: <span class="font-weight-bold">${sessionStorage.h}</span></p>
-                                    <p class="">Your unique access code: <span class="font-weight-bold">${sessionStorage.h.substring(0, 3).toLowerCase()}${sessionStorage.m.replaceAll(" ", "")}</span></p>
+                                    <p class="">Your unique access code: <span class="font-weight-bold">${sessionStorage.h.substring(0, 3).toLowerCase()}${sessionStorage.m.replaceAll(" ", "").replaceAll("+","")}</span></p>
                                     <p>Thank you.</p>
                                                 <button class="btn btn-primary mb-3 " onclick="window.print()" style="
                                         display: flex;
@@ -152,7 +152,7 @@ $(document).ready(function () {
     });
     //Prevent input characters other than numbers, plus, minus and space in the tel inputs.
     $("input.phoneinput").bind('keyup blur', function () {
-        $(this).val($(this).val().replace(/[^0-9\-\+\ ]/g, ''));
+        $(this).val($(this).val().replace(/[^0-9\+\ ]/g, ''));
         var input = document.querySelector(`[id="${$(this).attr("id")}"]`);
         var iti = window.intlTelInputGlobals.getInstance(input);
         var dialCode = iti.getSelectedCountryData().dialCode;
@@ -187,7 +187,7 @@ $(document).ready(function () {
     //form submit event
     $("#pds-page form").on("submit", function (e) {
         sessionStorage.setItem("e", $('.preferredEmailInput').val());
-        sessionStorage.setItem("m", $('[id="contactInfo.mobileTelephone"]').val().replace(/[^0-9]/g, ''));
+        sessionStorage.setItem("m", $('[id="contactInfo.mobileTelephone"]').val());
         sessionStorage.setItem("h", $('[id="contactInfo.homeCity"]').val());
     });
 
