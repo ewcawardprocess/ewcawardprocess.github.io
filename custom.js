@@ -60,7 +60,7 @@ $(document).ready(function () {
     }
 
     $("[type=tel]").each(function () {
-        $(this).after(`<input class="phoneinput form_fields form-control" type="text" ${$(this).attr("required") == true ? "required=true" : ""} name="` + $(this).attr("name") + `-assist" id="` + $(this).attr("id") + `-full" value="">`);
+        $(this).after(`<input class="phoneinput form_fields form-control" type="text" ${$(this).prop("required") == true ? "required=true" : ""} name="` + $(this).attr("name") + `-assist" id="` + $(this).attr("id") + `-full" value="">`);
         $(this).addClass("d-none");
     });
 
