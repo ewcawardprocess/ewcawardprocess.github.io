@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var instanceNumberElement = document.querySelector('#pds-success .form-row.alert.alert-success p:first-child .font-weight-bold');
     try {
     instanceNumberElement.className = "mb-0";
-    } catch {
-    }
     var successMessage = document.querySelector('#pds-success .form-row.alert.alert-success');
     successMessage.innerHTML = `<div>
                                     <p>Your form has been successfully submitted.</p>
@@ -41,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     </svg> PRINT</button>
                                                 <p class="mb-0">(for internal use only:  instance #<span class="font-weight-bold">${instanceNumberElement.innerHTML}</span>)</p>
                                 </div>`;
+        } catch {}
 });
 
 $(document).ready(function () {
