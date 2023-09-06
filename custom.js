@@ -157,8 +157,12 @@ $(document).ready(function () {
         var iti = window.intlTelInputGlobals.getInstance(input);
         var dialCode = iti.getSelectedCountryData().dialCode;
         var value = "+" + dialCode + " " + $(this).val().replace(/[^0-9]/g, '');
-        $(`[id="${$(this).attr("id").replaceAll("-full","")}"]`).val(value);            
-        console.log(value);
+        if ($(this).val() == "") {
+            $(`[id="${$(this).attr("id").replaceAll("-full","")}"]`).val(""); 
+        } else {
+            $(`[id="${$(this).attr("id").replaceAll("-full","")}"]`).val(value);            
+            console.log(value);
+        }
     });
 
     //validate mobile phone number to 8 characters minimum
