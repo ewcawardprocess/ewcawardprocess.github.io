@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Customize the success message.
     var instanceNumberElement = document.querySelector('#pds-success .form-row.alert.alert-success p:first-child .font-weight-bold');
+    try {
     instanceNumberElement.className = "mb-0";
+    } catch {
+    }
     var successMessage = document.querySelector('#pds-success .form-row.alert.alert-success');
     successMessage.innerHTML = `<div>
                                     <p>Your form has been successfully submitted.</p>
